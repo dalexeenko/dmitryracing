@@ -64,7 +64,7 @@ export default function Gallery() {
               width={800}
               height={Math.round(800 * (photo.height / photo.width))}
               loading="lazy"
-              className="block w-full brightness-100 transition-[transform] duration-300 group-hover:scale-[1.03] group-hover:brightness-110"
+              className="block w-full transition-[transform] duration-300 group-hover:scale-[1.03]"
               style={{
                 backgroundImage: `url(${photo.blurDataURL})`,
                 backgroundSize: "cover",
