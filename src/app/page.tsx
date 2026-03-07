@@ -1,13 +1,17 @@
 import Hero from "../components/Hero";
 import TrackMaps from "../components/TrackMaps";
 import Gallery from "../components/Gallery";
+import Instructors from "../components/Instructors";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
       <TrackMaps />
+
+
       <Gallery />
+      <Instructors />
 
       {/* Footer */}
       <footer className="border-t border-white/5 px-6 py-12">

@@ -5,7 +5,7 @@ export default function Hero() {
       <img
         src="/photos/full/sunset-racing-school-14-09-111.jpg"
         alt="Red Porsche 718 Cayman GT4 at speed on Algarve International Circuit"
-        className="absolute inset-0 h-full w-full object-cover object-center"
+        className="absolute inset-0 h-full w-full object-cover object-[70%_center]"
         loading="eager"
       />
 
