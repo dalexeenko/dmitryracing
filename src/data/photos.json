@@ -54,15 +54,6 @@
     "album": "pacific"
   },
   {
-    "id": "driving-days-28-09-302",
-    "src": "/photos/full/driving-days-28-09-302.jpg",
-    "thumb": "/photos/thumb/driving-days-28-09-302.jpg",
-    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EACUQAAEDAwMDBQAAAAAAAAAAAAECAxEABCIFEhMGFYEhMXGRwf/EABYBAQEBAAAAAAAAAAAAAAAAAAQCA//EABsRAAIDAAMAAAAAAAAAAAAAAAECAAMRMVHB/9oADAMBAAIRAxEAPwBCuoSlsce6Z9cMT4pJ6lAcKjbILYOWZB8VAnT2SBO4/JJqq2sGORKQhIk+8VIU9xL3JmKvs02NSZuW+RsltMkbVEk/YFFX9rat0pQVrUYmUwB+0VsKmI4gmuTZ/9k=",
-    "width": 1920,
-    "height": 1281,
-    "album": "estoril"
-  },
-  {
     "id": "driving-days-865",
     "src": "/photos/full/driving-days-865.jpg",
     "thumb": "/photos/thumb/driving-days-865.jpg",
@@ -70,15 +61,6 @@
     "width": 1920,
     "height": 1280,
     "album": "estoril"
-  },
-  {
-    "id": "99499307-locsin-20240501-ol23719-smugmug",
-    "src": "/photos/full/99499307-locsin-20240501-ol23719-smugmug.jpg",
-    "thumb": "/photos/thumb/99499307-locsin-20240501-ol23719-smugmug.jpg",
-    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAMFAQL/xAAjEAACAgEDAwUAAAAAAAAAAAABAgADEQQhMQUSIlFhcYGR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAgH/xAAYEQEBAQEBAAAAAAAAAAAAAAABACERMf/aAAwDAQACEQMRAD8AoWammpCzWKqA4LE4A+5MfrNN2uXT1hrquGas7fvpOj2kYIB+RMXx2UAewECZsxA8mEKTnAhF5Y8YhL0jf//Z",
-    "width": 1920,
-    "height": 1440,
-    "album": "pacific"
   },
   {
     "id": "prsphoto-da-trackday-05042026-00125",
@@ -189,24 +171,6 @@
     "album": "algarve"
   },
   {
-    "id": "driving-days-28-09-383",
-    "src": "/photos/full/driving-days-28-09-383.jpg",
-    "thumb": "/photos/thumb/driving-days-28-09-383.jpg",
-    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAANABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIDBAX/xAAkEAACAgEDAwUBAAAAAAAAAAABAgMRAAQFEiExURMiYYGRof/EABUBAQEAAAAAAAAAAAAAAAAAAAID/8QAGxEAAgMAAwAAAAAAAAAAAAAAABEBAhIDIVH/2gAMAwEAAhEDEQA/AAi1yoANzdRfKiWHf6yKy62JuDbhIR5BLV/Mx6kTzzGUTlBYIQCwMqSTVwsTHqavv7en55yebFYjjTfZ0ZPVkbk25z38R1jEW4OsaiRA7V1ayLxhxb0Dg//Z",
-    "width": 1920,
-    "height": 1280,
-    "album": "estoril"
-  },
-  {
-    "id": "sunset-racing-school-14-09-333",
-    "src": "/photos/full/sunset-racing-school-14-09-333.jpg",
-    "thumb": "/photos/thumb/sunset-racing-school-14-09-333.jpg",
-    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAABAv/EACUQAAICAQIEBwAAAAAAAAAAAAECAwQABRESEyIxIUFCUWKh0f/EABYBAQEBAAAAAAAAAAAAAAAAAAIDBP/EABoRAAICAwAAAAAAAAAAAAAAAAABAhESYXH/2gAMAwEAAhEDEQA/ANtVaaFeZegVQe8K9W/sCf3OYLFOCZ+XHZsh14CJOn77+WHn08TABpnCj0r4DEVaroFVJ3UDM7RahMbkJ06ahHzYk5YpNNdl3NyXc5YaloePT//Z",
-    "width": 1920,
-    "height": 1280,
-    "album": "algarve"
-  },
-  {
     "id": "driving-days-28-09-254",
     "src": "/photos/full/driving-days-28-09-254.jpg",
     "thumb": "/photos/thumb/driving-days-28-09-254.jpg",
@@ -223,15 +187,6 @@
     "width": 1920,
     "height": 1280,
     "album": "algarve"
-  },
-  {
-    "id": "mg-7218",
-    "src": "/photos/full/mg-7218.jpg",
-    "thumb": "/photos/thumb/mg-7218.jpg",
-    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAZABQDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAAIEBgMH/8QAJxAAAgEEAQIFBQAAAAAAAAAAAQIDAAQRIRMiMQU0QULRUXKCweH/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/xAAYEQEBAQEBAAAAAAAAAAAAAAAAAQIRA//aAAwDAQACEQMRAD8AqhjsreVpDfuHJyVHpTpd2E1yOTjkYdnGiayVwksHiEzuyhHZwMnYyD81IY3QdEqsdbBxirsaz571OyPQua1i6Y7IsvfII3RWUg8QZbeJZGfkC9ex3z8YoqZOZorh2jdAZV0M+7+1xxaMdxAEfUVO3nPz/dNe+bl+6gqcw+jACiox2ooL/9k=",
-    "width": 1920,
-    "height": 2400,
-    "album": "gt4"
   },
   {
     "id": "driving-days-866",
@@ -351,15 +306,6 @@
     "album": "pacific"
   },
   {
-    "id": "mg-7163",
-    "src": "/photos/full/mg-7163.jpg",
-    "thumb": "/photos/thumb/mg-7163.jpg",
-    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EACAQAAIABgMBAQAAAAAAAAAAAAECAAMEBRESEyExFKH/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECESExQf/aAAwDAQACEQMRAD8AgW0U52IlBlDHszMdZiuis1omoxqVde+uOZsD+RhJWv8AOZRUFG9GTg9xTb2TfdZYVh4VJELljQKPbYm9UVHTXF5VJtxADGxyfIIVc9JlazMuSQPWMEAn/9k=",
-    "width": 1920,
-    "height": 1280,
-    "album": "gt4"
-  },
-  {
     "id": "driving-days-28-09-189",
     "src": "/photos/full/driving-days-28-09-189.jpg",
     "thumb": "/photos/thumb/driving-days-28-09-189.jpg",
@@ -427,15 +373,6 @@
     "src": "/photos/full/prsphoto-da-trackday-05042026-00331.jpg",
     "thumb": "/photos/thumb/prsphoto-da-trackday-05042026-00331.jpg",
     "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGA//EACcQAAIBAwIDCQAAAAAAAAAAAAECAwAEIQUREhMxFSNRUmFigYKh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAED/8QAGxEAAgIDAQAAAAAAAAAAAAAAAAEREgIDEzH/2gAMAwEAAhEDEQA/AEnZtxAveQxDHES7DA9a2FtM+Y7W2bbyEHb9ppp+tyyQhZoldh1bpv8AG1NkeOVAzW8WfaKytHoWtZKURksBMh5lmqsPBiKKsJEt+LNrEfrRSxeR/9k=",
-    "width": 1920,
-    "height": 1280,
-    "album": "estoril"
-  },
-  {
-    "id": "driving-days-770",
-    "src": "/photos/full/driving-days-770.jpg",
-    "thumb": "/photos/thumb/driving-days-770.jpg",
-    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABgAB/8QAIxAAAgEDBAEFAAAAAAAAAAAAAQIDAAQRBhIhMVETQnGisf/EABYBAQEBAAAAAAAAAAAAAAAAAAMBAv/EABgRAAMBAQAAAAAAAAAAAAAAAAABEQJR/9oADAMBAAIRAxEAPwA3CkkVwk4mzu5ZG7+KjZCWd3EpCHOF748ZpKdORzqAk/pt3u2bv01sGl1SQGS8eRR7SgwaFxCpUOpCY1CxrhfBqpWdO22eG+gqrNz0s1w//9k=",
     "width": 1920,
     "height": 1280,
     "album": "estoril"

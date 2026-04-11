@@ -3,6 +3,7 @@
 import React, { useState, useCallback, useRef } from "react";
 import photos from "../data/photos.json";
 import Lightbox from "./Lightbox";
+import type { Album } from "../app/page";
 
 function VideoTile({ src, poster, href }: { src: string; poster: string; href: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -48,24 +49,13 @@ const VIDEOS = [
   { index: 2, src: "/video/gt4-loop.mp4", poster: "/video/gt4-poster.jpg", href: "https://www.youtube.com/watch?v=Ry88WxWedhs" },
 ];
 
-type Album = "all" | "algarve" | "estoril" | "gt4" | "pacific";
-
-const TABS: { label: string; value: Album }[] = [
-  { label: "All", value: "all" },
-  { label: "Portimão", value: "algarve" },
-  { label: "Estoril", value: "estoril" },
-  { label: "Pacific Raceways", value: "pacific" },
-  { label: "The Ridge", value: "" },
-];
-
-export default function Gallery() {
-  const [activeTab, setActiveTab] = useState<Album>("all");
+export default function Gallery({ activeAlbum }: { activeAlbum: Album }) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const filtered =
-    activeTab === "all"
+    activeAlbum === "all"
       ? photos
-      : photos.filter((p) => p.album === activeTab);
+      : photos.filter((p) => p.album === activeAlbum);
 
   const openLightbox = useCallback((index: number) => {
     setLightboxIndex(index);
@@ -77,28 +67,11 @@ export default function Gallery() {
 
   return (
     <section id="gallery" className="px-4 py-16 sm:px-8 md:px-12 lg:px-16">
-      {/* Filter tabs */}
-      <div className="mb-10 flex flex-wrap items-center justify-center gap-2">
-        {TABS.map((tab) => (
-          <button
-            key={tab.value}
-            onClick={() => setActiveTab(tab.value)}
-            className={`rounded-full px-5 py-2 text-sm font-medium transition-all ${
-              activeTab === tab.value
-                ? "bg-white text-[#0a0a0a]"
-                : "bg-white/5 text-white/60 hover:bg-white/10 hover:text-white/80"
-            }`}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
-
       {/* Masonry grid */}
       <div className="columns-2 gap-3 md:columns-3 lg:columns-4 [&>*]:mb-3">
         {filtered.map((photo, index) => (
           <React.Fragment key={photo.id}>
-            {activeTab === "all" && VIDEOS.filter(v => v.index === index).map(v => (
+            {activeAlbum === "all" && VIDEOS.filter(v => v.index === index).map(v => (
               <VideoTile key={v.src} src={v.src} poster={v.poster} href={v.href} />
             ))}
             <button

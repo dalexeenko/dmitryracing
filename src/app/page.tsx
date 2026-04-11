@@ -1,16 +1,24 @@
+"use client";
+
+import { useState } from "react";
 import Hero from "../components/Hero";
+import Nav from "../components/Nav";
 import TrackMaps from "../components/TrackMaps";
 import Gallery from "../components/Gallery";
 import Instructors from "../components/Instructors";
 
+export type Album = "all" | "algarve" | "estoril" | "gt4" | "pacific";
+
 export default function Home() {
+  const [activeAlbum, setActiveAlbum] = useState<Album>("all");
+
   return (
     <main className="min-h-screen">
+      <Nav />
       <Hero />
-      <TrackMaps />
+      <TrackMaps activeAlbum={activeAlbum} onAlbumChange={setActiveAlbum} />
 
-
-      <Gallery />
+      <Gallery activeAlbum={activeAlbum} />
       <Instructors />
 
       {/* Footer */}
