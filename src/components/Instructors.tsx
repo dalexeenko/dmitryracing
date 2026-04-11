@@ -27,7 +27,7 @@ const INSTRUCTORS = [
 
 export default function Instructors() {
   return (
-    <section className="border-t border-white/5 px-6 py-16 sm:px-12">
+    <section id="instructors" className="border-t border-white/5 px-6 py-16 sm:px-12">
       <div className="mx-auto max-w-3xl">
         <h2 className="mb-2 text-sm font-bold uppercase tracking-widest text-white/40">
           Thank You
@@ -42,14 +42,14 @@ export default function Instructors() {
               href={inst.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block"
+              className="group block text-center"
             >
               <img
                 src={inst.photo}
                 alt={inst.name}
                 width={80}
                 height={80}
-                className="mb-3 rounded-full grayscale opacity-70 transition-opacity group-hover:opacity-100"
+                className="mx-auto mb-3 rounded-full grayscale opacity-70 transition-opacity group-hover:opacity-100"
               />
               <p className="font-bold text-white/80 transition-colors group-hover:text-white">
                 {inst.name}
