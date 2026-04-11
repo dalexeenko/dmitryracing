@@ -1,6 +1,19 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+// Tiled grain/noise SVG — layered over the hero image for a gritty "asphalt" feel,
+// inspired by fairground.work's "asfalt-light" texture.
+const GRAIN_SVG = `data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>`;
+
+const ease = [0.22, 1, 0.36, 1] as const;
+
 export default function Hero() {
   return (
-    <section className="relative h-[100svh] w-full overflow-hidden">
+    <section
+      id="top"
+      className="relative h-[100svh] w-full overflow-hidden"
+    >
       {/* Background image */}
       <img
         src="/photos/full/sunset-racing-school-14-09-111.jpg"
@@ -13,37 +26,42 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/30 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/60 to-transparent" />
 
+      {/* Asphalt grain texture */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-[0.18] mix-blend-overlay"
+        style={{
+          backgroundImage: `url("${GRAIN_SVG}")`,
+          backgroundSize: "240px 240px",
+        }}
+      />
+
       {/* Content */}
       <div className="relative z-10 flex h-full flex-col justify-end px-6 pb-16 sm:px-12 md:px-20 lg:px-28">
-        <h1 className="text-5xl font-black tracking-tight sm:text-7xl md:text-8xl lg:text-9xl">
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.25, ease }}
+          className="text-5xl font-black tracking-tight sm:text-7xl md:text-8xl lg:text-9xl"
+        >
           DMITRY
           <br />
           <span className="text-[#e53935]">RACING</span>
-        </h1>
-        <p className="mt-4 max-w-md text-lg text-white/60 sm:text-xl">
-          Portimão &middot; Estoril &middot; Pacific Raceways &middot; The Ridge
-        </p>
-        <a
-          href="#gallery"
-          className="mt-8 inline-flex w-fit items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-white/80 transition-colors hover:border-white/40 hover:text-white"
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.45, ease }}
+          className="mt-4 max-w-md text-lg sm:text-xl"
         >
-          View Gallery
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-            className="translate-y-px"
-          >
-            <path
-              d="M8 3v10m0 0l-4-4m4 4l4-4"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </a>
+          <span className="text-white/40">Portimão &middot; Estoril</span>
+          <span className="text-white/80">
+            {" "}
+            &middot; Pacific Raceways &middot; The Ridge
+          </span>
+        </motion.p>
+
       </div>
     </section>
   );
