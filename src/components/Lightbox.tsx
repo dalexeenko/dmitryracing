@@ -158,7 +158,7 @@ export default function Lightbox({
       {/* Image */}
       <div
         {...swipeHandlers}
-        className="flex h-full w-full items-center justify-center px-16 py-16"
+        className="flex h-full w-full items-center justify-center px-2 py-12 sm:px-16 sm:py-16"
         onClick={(e) => e.stopPropagation()}
       >
         <AnimatePresence mode="wait" custom={direction}>
@@ -172,7 +172,7 @@ export default function Lightbox({
             animate="center"
             exit="exit"
             transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="max-h-full max-w-full rounded-lg object-contain"
+            className="max-h-full max-w-full rounded-none sm:rounded-lg object-contain"
             style={{
               backgroundImage: `url(${photo.blurDataURL})`,
               backgroundSize: "cover",
