@@ -158,7 +158,7 @@ export default function Lightbox({
       {/* Image */}
       <div
         {...swipeHandlers}
-        className="flex h-full w-full items-center justify-center px-2 py-12 sm:px-16 sm:py-16"
+        className="flex h-full w-full items-center justify-center px-2 py-12 sm:px-4 sm:py-4"
         onClick={(e) => e.stopPropagation()}
       >
         <AnimatePresence mode="wait" custom={direction}>
