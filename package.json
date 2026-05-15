@@ -23,15 +23,15 @@
     "autoprefixer": "^10.4.27",
     "framer-motion": "^12.34.3",
     "maplibre-gl": "^5.24.0",
-    "next": "^16.1.6",
-    "postcss": "^8.5.6",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
+    "next": "^16.2.6",
+    "postcss": "^8.5.14",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
     "react-swipeable": "^7.0.2",
     "tailwindcss": "^4.2.1"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "^1.25.6",
+    "@cloudflare/vite-plugin": "^1.37.1",
     "@cloudflare/workers-types": "^4.20260515.1",
     "@lhci/cli": "^0.15.1",
     "@playwright/test": "^1.60.0",
@@ -39,15 +39,21 @@
     "@types/geojson": "^7946.0.16",
     "@types/node": "^25.3.2",
     "@types/react": "^19.2.14",
-    "@vitejs/plugin-rsc": "^0.5.21",
+    "@vitejs/plugin-react": "^6.0.2",
+    "@vitejs/plugin-rsc": "^0.5.26",
     "jsdom": "^29.1.1",
-    "react-server-dom-webpack": "^19.2.4",
+    "react-server-dom-webpack": "^19.2.6",
     "sharp": "^0.34.5",
     "typescript": "^5.9.3",
-    "vinext": "^0.0.15",
-    "vite": "^7.3.1",
+    "vinext": "^0.0.50",
+    "vite": "^8.0.13",
     "vitest": "^4.1.6",
     "wait-on": "^9.0.10",
-    "wrangler": "^4.69.0"
+    "wrangler": "^4.92.0"
+  },
+  "overrides": {
+    "postcss": "^8.5.14",
+    "fast-uri": "^3.1.2",
+    "serialize-javascript": "^7.0.5"
   }
 }
