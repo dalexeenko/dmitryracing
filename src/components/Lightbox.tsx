@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
 import type { Photo } from "@/types/photo";
+import { lightboxSizes, lightboxSrcSet, vinextImageUrl } from "@/lib/optimized-image";
 
 interface LightboxProps {
   photos: Photo[];
@@ -151,7 +152,9 @@ export default function Lightbox({
         <AnimatePresence mode="wait" custom={direction}>
           <motion.img
             key={photo.id}
-            src={photo.src}
+            src={vinextImageUrl(photo.src, 1920, 82)}
+            srcSet={lightboxSrcSet(photo.src, 82)}
+            sizes={lightboxSizes}
             alt=""
             custom={direction}
             variants={variants}

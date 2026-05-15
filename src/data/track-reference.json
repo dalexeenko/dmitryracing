@@ -1,0 +1,150 @@
+{
+  "portimao": {
+    "slug": "portimao",
+    "album": "algarve",
+    "circuit": { "en": "Algarve International Circuit (Portimão)", "pt": "Autódromo Internacional do Algarve (Portimão)" },
+    "intro": {
+      "en": "Unofficial reference notes for learning the lap — always verify line of sight, flags, and organizer rules on the day.",
+      "pt": "Notas de referência para aprender a volta — confirme sempre visibilidade, sinalização e regras do organizador no dia."
+    },
+    "fullLap": {
+      "href": "https://www.youtube.com/watch?v=Yobha4RtjPA",
+      "label": { "en": "Onboard (example lap)", "pt": "Onboard (exemplo)" }
+    },
+    "points": [
+      {
+        "id": "t1",
+        "order": 1,
+        "name": { "en": "Turn 1 — Galp", "pt": "Curva 1 — Galp" },
+        "lapPct": 4,
+        "brake": { "en": "Brake in a straight line; avoid turning in under brakes on cold tires.", "pt": "Travar em linha reta; evite entrar a travar com pneus frios." },
+        "video": { "href": "https://www.youtube.com/watch?v=Yobha4RtjPA", "startSec": 0 }
+      },
+      {
+        "id": "t4",
+        "order": 4,
+        "name": { "en": "Turn 4 — downhill approach", "pt": "Curva 4 — aproximação em descida" },
+        "lapPct": 18,
+        "brake": { "en": "Elevation hides braking references — pick a tree/sign and commit.", "pt": "O desnível esconde referências de travagem — escolha uma árvore/sinal e confirme." },
+        "video": { "href": "https://www.youtube.com/watch?v=Yobha4RtjPA", "startSec": 35 }
+      },
+      {
+        "id": "t8",
+        "order": 8,
+        "name": { "en": "Turn 8 — corkscrew feel", "pt": "Curva 8 — mudança de desnível" },
+        "lapPct": 38,
+        "brake": { "en": "Short lift or brake; prioritize rotation over entry speed.", "pt": "Lift curto ou travagem leve; priorize rotação em vez da velocidade de entrada." },
+        "video": { "href": "https://www.youtube.com/watch?v=Yobha4RtjPA", "startSec": 70 }
+      },
+      {
+        "id": "t14",
+        "order": 14,
+        "name": { "en": "Turn 14 — onto pit straight", "pt": "Curva 14 — para a reta das boxes" },
+        "lapPct": 78,
+        "brake": { "en": "Late apex sets up the kink onto the straight; don’t pinch exit.", "pt": "Apex tardio prepara o ligeiro na reta; não estrangule a saída." },
+        "video": { "href": "https://www.youtube.com/watch?v=Yobha4RtjPA", "startSec": 120 }
+      }
+    ]
+  },
+  "estoril": {
+    "slug": "estoril",
+    "album": "estoril",
+    "circuit": { "en": "Circuito do Estoril", "pt": "Circuito do Estoril" },
+    "intro": {
+      "en": "Classic GP layout with long-radius corners — smooth inputs beat hero braking here.",
+      "pt": "Layout clássico de GP com curvas de raio longo — entradas suaves vencem travagens heroicas."
+    },
+    "fullLap": {
+      "href": "https://www.youtube.com/watch?v=Ry88WxWedhs",
+      "label": { "en": "Track reference (example)", "pt": "Referência (exemplo)" }
+    },
+    "points": [
+      {
+        "id": "e1",
+        "order": 1,
+        "name": { "en": "Turn 1 — tight after start/finish", "pt": "Curva 1 — apertada após meta" },
+        "lapPct": 5,
+        "brake": { "en": "Patience on exit — wall is close; build throttle progressively.", "pt": "Paciência na saída — o muro está perto; acelere de forma progressiva." },
+        "video": { "href": "https://www.youtube.com/watch?v=Ry88WxWedhs", "startSec": 5 }
+      },
+      {
+        "id": "e6",
+        "order": 6,
+        "name": { "en": "Parabolica inner — traction limited", "pt": "Parabólica interior — tração limitada" },
+        "lapPct": 55,
+        "brake": { "en": "Apex curb can help rotation; respect noise/session rules for curbs.", "pt": "O apex no cordão pode ajudar a rotação; respeite regras de ruído/bordos." },
+        "video": { "href": "https://www.youtube.com/watch?v=Ry88WxWedhs", "startSec": 60 }
+      },
+      {
+        "id": "e13",
+        "order": 13,
+        "name": { "en": "Final corner — straight-line exit", "pt": "Última curva — saída em linha reta" },
+        "lapPct": 88,
+        "brake": { "en": "Sacrifice entry to open the exit onto the pit straight.", "pt": "Sacrifique a entrada para abrir a saída para a reta das boxes." },
+        "video": { "href": "https://www.youtube.com/watch?v=Ry88WxWedhs", "startSec": 95 }
+      }
+    ]
+  },
+  "pacific": {
+    "slug": "pacific",
+    "album": "pacific",
+    "circuit": { "en": "Pacific Raceways", "pt": "Pacific Raceways" },
+    "intro": {
+      "en": "Pacific Northwest weather and rubber change grip hour-to-hour — re-evaluate each session.",
+      "pt": "Clima do Noroeste e borracha mudam a aderência de hora a hora — reavalie em cada sessão."
+    },
+    "fullLap": {
+      "href": "https://www.youtube.com/watch?v=Ry88WxWedhs",
+      "label": { "en": "Example onboard", "pt": "Onboard de exemplo" }
+    },
+    "points": [
+      {
+        "id": "p3",
+        "order": 3,
+        "name": { "en": "Esses — rhythm section", "pt": "Esses — secção de ritmo" },
+        "lapPct": 22,
+        "brake": { "en": "Link corners: fix eyes on exit of the last ess, not the hood.", "pt": "Ligue curvas: olhos na saída da última ess, não no capô." },
+        "video": { "href": "https://www.youtube.com/watch?v=Ry88WxWedhs", "startSec": 20 }
+      },
+      {
+        "id": "p7",
+        "order": 7,
+        "name": { "en": "Long right — commitment", "pt": "Longa à direita — compromisso" },
+        "lapPct": 48,
+        "brake": { "en": "Trail brake gently; surface seal varies with temperature.", "pt": "Trail brake suave; o grip varia com a temperatura." },
+        "video": { "href": "https://www.youtube.com/watch?v=Ry88WxWedhs", "startSec": 45 }
+      }
+    ]
+  },
+  "ridge": {
+    "slug": "ridge",
+    "album": "gt4",
+    "circuit": { "en": "The Ridge Motorsports Park", "pt": "The Ridge Motorsports Park" },
+    "intro": {
+      "en": "Elevation and blind crests reward early turn-in points — walk the track if allowed.",
+      "pt": "Desnível e cumes cegos recompensam referências de entrada cedo — percorra a pista se permitido."
+    },
+    "fullLap": {
+      "href": "https://www.youtube.com/watch?v=Ry88WxWedhs",
+      "label": { "en": "Example lap", "pt": "Volta de exemplo" }
+    },
+    "points": [
+      {
+        "id": "r1",
+        "order": 1,
+        "name": { "en": "Turn 1 — blind crest", "pt": "Curva 1 — cume cego" },
+        "lapPct": 8,
+        "brake": { "en": "Brake before the crest; let the car settle before turning.", "pt": "Trave antes do cume; deixe o carro assentar antes de virar." },
+        "video": { "href": "https://www.youtube.com/watch?v=Ry88WxWedhs", "startSec": 10 }
+      },
+      {
+        "id": "r5",
+        "order": 5,
+        "name": { "en": "Carousel — camber", "pt": "Carrossel — cambagem" },
+        "lapPct": 40,
+        "brake": { "en": "Use banking; small throttle lifts adjust line without big steering.", "pt": "Use a inclinação; pequenos lifts ajustam a linha sem grande volante." },
+        "video": { "href": "https://www.youtube.com/watch?v=Ry88WxWedhs", "startSec": 55 }
+      }
+    ]
+  }
+}

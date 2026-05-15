@@ -18,8 +18,10 @@ export default function Nav() {
   }, []);
 
   const links = [
-    { href: "#gallery", label: t("navGallery") },
     { href: "#tracks", label: t("navTracks") },
+    { href: "#guide", label: t("navGuide") },
+    { href: "#story", label: t("navStory") },
+    { href: "#gallery", label: t("navGallery") },
     { href: "#instructors", label: t("navInstructors") },
     { href: "#telemetry", label: t("navTelemetry") },
   ];
