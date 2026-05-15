@@ -3,10 +3,14 @@
 import React, { useState, useCallback, useRef } from "react";
 import photos from "../data/photos.json";
 import Lightbox from "./Lightbox";
-import type { Album } from "../app/page";
+import type { Album } from "@/types/album";
+import { useLocale } from "./LocaleProvider";
+import { usePrefersReducedMotion } from "./usePrefersReducedMotion";
+import type { Photo } from "@/types/photo";
 
 function VideoTile({ src, poster, href }: { src: string; poster: string; href: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const reduceMotion = usePrefersReducedMotion();
 
   return (
     <a
@@ -15,10 +19,15 @@ function VideoTile({ src, poster, href }: { src: string; poster: string; href: s
       rel="noopener noreferrer"
       className="group relative block w-full overflow-hidden rounded-lg break-inside-avoid"
       style={{ aspectRatio: "16 / 9" }}
-      onMouseEnter={() => videoRef.current?.play()}
+      onMouseEnter={() => {
+        if (!reduceMotion) videoRef.current?.play();
+      }}
       onMouseLeave={() => {
         const v = videoRef.current;
-        if (v) { v.pause(); v.currentTime = 0; }
+        if (v) {
+          v.pause();
+          v.currentTime = 0;
+        }
       }}
     >
       <video
@@ -29,10 +38,12 @@ function VideoTile({ src, poster, href }: { src: string; poster: string; href: s
         loop
         playsInline
         preload="auto"
-        className="absolute inset-0 h-full w-full object-cover transition-[transform] duration-300 group-hover:scale-[1.03]"
+        className={`absolute inset-0 h-full w-full object-cover ${reduceMotion ? "" : "transition-[transform] duration-300 group-hover:scale-[1.03]"}`}
       />
 
-      <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0">
+      <div
+        className={`absolute inset-0 flex items-center justify-center ${reduceMotion ? "" : "transition-opacity duration-300 group-hover:opacity-0"}`}
+      >
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
           <circle cx="24" cy="24" r="24" fill="black" fillOpacity="0.5" />
           <path d="M19 15l14 9-14 9V15z" fill="white" />
@@ -49,13 +60,17 @@ const VIDEOS = [
   { index: 2, src: "/video/gt4-loop.mp4", poster: "/video/gt4-poster.jpg", href: "https://www.youtube.com/watch?v=Ry88WxWedhs" },
 ];
 
+const photoList = photos as Photo[];
+
 export default function Gallery({ activeAlbum }: { activeAlbum: Album }) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const { t } = useLocale();
+  const reduceMotion = usePrefersReducedMotion();
 
   const filtered =
     activeAlbum === "all"
-      ? photos
-      : photos.filter((p) => p.album === activeAlbum);
+      ? photoList
+      : photoList.filter((p) => p.album === activeAlbum);
 
   const openLightbox = useCallback((index: number) => {
     setLightboxIndex(index);
@@ -67,7 +82,9 @@ export default function Gallery({ activeAlbum }: { activeAlbum: Album }) {
 
   return (
     <section id="gallery" className="px-4 py-16 sm:px-8 md:px-12 lg:px-16">
-      {/* Masonry grid */}
+      <h2 className="mb-8 text-sm font-bold uppercase tracking-widest text-white/40">
+        {t("galleryHeading")}
+      </h2>
       <div className="columns-2 gap-3 md:columns-3 lg:columns-4 [&>*]:mb-3">
         {filtered.map((photo, index) => (
           <React.Fragment key={photo.id}>
@@ -84,10 +101,11 @@ export default function Gallery({ activeAlbum }: { activeAlbum: Album }) {
                 width={800}
                 height={Math.round(800 * (photo.height / photo.width))}
                 loading="lazy"
-                className="block w-full transition-[transform] duration-300 group-hover:scale-[1.03]"
+                className={`block w-full ${reduceMotion ? "" : "transition-[transform] duration-300 group-hover:scale-[1.03]"}`}
                 style={{
                   backgroundImage: `url(${photo.blurDataURL})`,
                   backgroundSize: "cover",
+                  backgroundColor: photo.dominantColor ?? "#111",
                   aspectRatio: `${photo.width} / ${photo.height}`,
                 }}
               />
@@ -97,7 +115,6 @@ export default function Gallery({ activeAlbum }: { activeAlbum: Album }) {
         ))}
       </div>
 
-      {/* Lightbox */}
       {lightboxIndex !== null && (
         <Lightbox
           photos={filtered}

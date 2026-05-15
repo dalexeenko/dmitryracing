@@ -2,24 +2,26 @@ import sharp from "sharp";
 import { readdir, mkdir, writeFile } from "fs/promises";
 import { join, basename, extname } from "path";
 
-const SOURCE_DIRS = [
-  {
-    path: "/Users/dalexeenko/Downloads/NAS/Photos-RAW-2025/Algarve Racing School Sepember",
-    album: "algarve",
-  },
-  {
-    path: "/Users/dalexeenko/Downloads/NAS/Photos-RAW-2025/Estoril Photos",
-    album: "estoril",
-  },
-  {
-    path: "/Users/dalexeenko/Downloads/NAS/Photos-RAW-2025/Gt4",
-    album: "gt4",
-  },
-  {
-    path: "/Users/dalexeenko/Downloads/Personal/Photos/Porsche Photos",
-    album: "pacific",
-  },
-];
+const SOURCE_DIRS = process.env.PHOTO_SOURCE_JSON
+  ? JSON.parse(process.env.PHOTO_SOURCE_JSON)
+  : [
+      {
+        path: "/Users/dalexeenko/Downloads/NAS/Photos-RAW-2025/Algarve Racing School Sepember",
+        album: "algarve",
+      },
+      {
+        path: "/Users/dalexeenko/Downloads/NAS/Photos-RAW-2025/Estoril Photos",
+        album: "estoril",
+      },
+      {
+        path: "/Users/dalexeenko/Downloads/NAS/Photos-RAW-2025/Gt4",
+        album: "gt4",
+      },
+      {
+        path: "/Users/dalexeenko/Downloads/Personal/Photos/Porsche Photos",
+        album: "pacific",
+      },
+    ];
 
 const FULL_DIR = "public/photos/full";
 const THUMB_DIR = "public/photos/thumb";
@@ -62,6 +64,12 @@ async function processImage(filePath, album, index) {
   // Calculate output dimensions
   const fullMeta = await sharp(join(FULL_DIR, outName)).metadata();
 
+  const { channels } = await sharp(join(THUMB_DIR, outName)).stats();
+  const r = Math.round(channels[0].mean);
+  const g = channels[1] ? Math.round(channels[1].mean) : r;
+  const b = channels[2] ? Math.round(channels[2].mean) : r;
+  const dominantColor = `rgb(${r},${g},${b})`;
+
   return {
     id: slug,
     src: `/photos/full/${outName}`,
@@ -70,6 +78,7 @@ async function processImage(filePath, album, index) {
     width: fullMeta.width,
     height: fullMeta.height,
     album,
+    dominantColor,
   };
 }
 

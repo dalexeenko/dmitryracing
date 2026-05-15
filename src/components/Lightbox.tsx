@@ -1,18 +1,9 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
-
-interface Photo {
-  id: string;
-  src: string;
-  thumb: string;
-  blurDataURL: string;
-  width: number;
-  height: number;
-  album: string;
-}
+import type { Photo } from "@/types/photo";
 
 interface LightboxProps {
   photos: Photo[];
@@ -27,6 +18,7 @@ export default function Lightbox({
 }: LightboxProps) {
   const [index, setIndex] = useState(initialIndex);
   const [direction, setDirection] = useState(0);
+  const reduceMotion = useReducedMotion() ?? false;
 
   const photo = photos[index];
 
@@ -44,7 +36,6 @@ export default function Lightbox({
     }
   }, [index]);
 
-  // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -59,7 +50,6 @@ export default function Lightbox({
     };
   }, [onClose, goNext, goPrev]);
 
-  // Swipe handlers
   const swipeHandlers = useSwipeable({
     onSwipedLeft: goNext,
     onSwipedRight: goPrev,
@@ -67,30 +57,31 @@ export default function Lightbox({
     preventScrollOnSwipe: true,
   });
 
+  const slide = reduceMotion ? 0 : 300;
+
   const variants = {
     enter: (dir: number) => ({
-      x: dir > 0 ? 300 : -300,
-      opacity: 0,
+      x: dir > 0 ? slide : -slide,
+      opacity: reduceMotion ? 1 : 0,
     }),
     center: {
       x: 0,
       opacity: 1,
     },
     exit: (dir: number) => ({
-      x: dir > 0 ? -300 : 300,
-      opacity: 0,
+      x: dir > 0 ? -slide : slide,
+      opacity: reduceMotion ? 1 : 0,
     }),
   };
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
+      initial={{ opacity: reduceMotion ? 1 : 0 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      exit={{ opacity: reduceMotion ? 1 : 0 }}
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-sm"
       onClick={onClose}
     >
-      {/* Close button */}
       <button
         onClick={onClose}
         className="absolute right-4 top-4 z-50 rounded-full bg-white/10 p-2 text-white/70 transition-colors hover:bg-white/20 hover:text-white"
@@ -106,12 +97,10 @@ export default function Lightbox({
         </svg>
       </button>
 
-      {/* Counter */}
       <div className="absolute left-4 top-4 z-50 text-sm text-white/40 font-medium">
         {index + 1} / {photos.length}
       </div>
 
-      {/* Previous button */}
       {index > 0 && (
         <button
           onClick={(e) => {
@@ -133,7 +122,6 @@ export default function Lightbox({
         </button>
       )}
 
-      {/* Next button */}
       {index < photos.length - 1 && (
         <button
           onClick={(e) => {
@@ -155,7 +143,6 @@ export default function Lightbox({
         </button>
       )}
 
-      {/* Image */}
       <div
         {...swipeHandlers}
         className="flex h-full w-full items-center justify-center px-2 py-12 sm:px-4 sm:py-4"
@@ -171,12 +158,13 @@ export default function Lightbox({
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ duration: 0.2, ease: "easeInOut" }}
+            transition={{ duration: reduceMotion ? 0 : 0.2, ease: "easeInOut" }}
             className="max-h-full max-w-full rounded-none sm:rounded-lg object-contain"
             style={{
               backgroundImage: `url(${photo.blurDataURL})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
+              backgroundColor: photo.dominantColor ?? "#111",
             }}
           />
         </AnimatePresence>
