@@ -3,6 +3,14 @@
 import { motion } from "framer-motion";
 import { useLocale } from "./LocaleProvider";
 import { usePrefersReducedMotion } from "./usePrefersReducedMotion";
+import { vinextImageUrl } from "@/lib/optimized-image";
+
+const HERO_IMAGE = "/photos/full/sunset-racing-school-14-09-111.jpg";
+const HERO_SRCSET = [
+  `${vinextImageUrl(HERO_IMAGE, 640, 75)} 640w`,
+  `${vinextImageUrl(HERO_IMAGE, 1080, 78)} 1080w`,
+  `${vinextImageUrl(HERO_IMAGE, 1920, 80)} 1920w`,
+].join(", ");
 
 const GRAIN_SVG = `data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>`;
 
@@ -15,7 +23,9 @@ export default function Hero() {
   return (
     <section id="top" className="relative h-[100svh] w-full overflow-hidden">
       <img
-        src="/photos/full/sunset-racing-school-14-09-111.jpg"
+        src={vinextImageUrl(HERO_IMAGE, 1920, 80)}
+        srcSet={HERO_SRCSET}
+        sizes="100vw"
         alt="Porsche 718 Cayman GT4 at speed on Algarve International Circuit"
         className="absolute inset-0 h-full w-full object-cover object-[70%_center]"
         loading="eager"

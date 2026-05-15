@@ -13,13 +13,10 @@
   },
   "images": {
     "binding": "IMAGES"
-  },
-  "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "dmitryracing",
-      "database_id": "00000000-0000-4000-8000-000000000001",
-      "migrations_dir": "migrations"
-    }
-  ]
+  }
+  // Optional D1: run `wrangler d1 create dmitryracing`, copy the database_id, then add:
+  // "d1_databases": [
+  //   { "binding": "DB", "database_name": "dmitryracing", "database_id": "<your-uuid>", "migrations_dir": "migrations" }
+  // ],
+  // and apply migrations: wrangler d1 migrations apply DB --remote
 }

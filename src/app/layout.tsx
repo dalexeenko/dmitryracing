@@ -2,6 +2,9 @@ import "./globals.css";
 import { cookies } from "next/headers";
 import { LocaleProvider } from "@/components/LocaleProvider";
 import type { Locale } from "@/i18n/messages";
+import { vinextImageUrl } from "@/lib/optimized-image";
+
+const HERO_LCP = "/photos/full/sunset-racing-school-14-09-111.jpg";
 
 export const metadata = {
   title: "DMITRY RACING | Porsche 718 Cayman GT4 on Track",
@@ -30,6 +33,14 @@ export default async function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
           rel="stylesheet"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href={vinextImageUrl(HERO_LCP, 1920, 80)}
+          imageSrcSet={`${vinextImageUrl(HERO_LCP, 640, 75)} 640w, ${vinextImageUrl(HERO_LCP, 1080, 78)} 1080w, ${vinextImageUrl(HERO_LCP, 1920, 80)} 1920w`}
+          imageSizes="100vw"
+          fetchPriority="high"
         />
       </head>
       <body className="bg-[#0a0a0a] text-white antialiased font-[Inter,sans-serif]">

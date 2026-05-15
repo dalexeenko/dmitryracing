@@ -4,6 +4,8 @@ export const messages = {
   en: {
     navGallery: "Gallery",
     navTracks: "Tracks",
+    navGuide: "Guide",
+    navStory: "Story",
     navInstructors: "Instructors",
     navTelemetry: "Telemetry",
     navLocale: "PT",
@@ -33,6 +35,8 @@ export const messages = {
   pt: {
     navGallery: "Galeria",
     navTracks: "Circuitos",
+    navGuide: "Guia",
+    navStory: "História",
     navInstructors: "Instrutores",
     navTelemetry: "Telemetria",
     navLocale: "EN",

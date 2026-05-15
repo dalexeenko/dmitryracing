@@ -6,7 +6,9 @@ import Nav from "./Nav";
 import TrackMaps from "./TrackMaps";
 import Gallery from "./Gallery";
 import Instructors from "./Instructors";
+import StoryTimeline from "./StoryTimeline";
 import TelemetryMapGate from "./TelemetryMapGate";
+import TrackReferenceGuide from "./TrackReferenceGuide";
 import { useLocale } from "./LocaleProvider";
 import type { Album } from "@/types/album";
 
@@ -19,7 +21,8 @@ export default function HomeShell() {
       <Nav />
       <Hero />
       <TrackMaps activeAlbum={activeAlbum} onAlbumChange={setActiveAlbum} />
-
+      <TrackReferenceGuide activeAlbum={activeAlbum} onPickAlbum={setActiveAlbum} />
+      <StoryTimeline />
       <Gallery activeAlbum={activeAlbum} />
       <Instructors />
 

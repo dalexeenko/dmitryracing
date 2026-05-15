@@ -7,6 +7,7 @@ import type { Album } from "@/types/album";
 import { useLocale } from "./LocaleProvider";
 import { usePrefersReducedMotion } from "./usePrefersReducedMotion";
 import type { Photo } from "@/types/photo";
+import { galleryThumbSizes, galleryThumbSrcSet, vinextImageUrl } from "@/lib/optimized-image";
 
 function VideoTile({ src, poster, href }: { src: string; poster: string; href: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -96,11 +97,14 @@ export default function Gallery({ activeAlbum }: { activeAlbum: Album }) {
               className="group relative block w-full overflow-hidden rounded-lg break-inside-avoid cursor-pointer"
             >
               <img
-                src={photo.thumb}
+                src={vinextImageUrl(photo.thumb, 384, 76)}
+                srcSet={galleryThumbSrcSet(photo.thumb, 76)}
+                sizes={galleryThumbSizes}
                 alt=""
                 width={800}
                 height={Math.round(800 * (photo.height / photo.width))}
                 loading="lazy"
+                decoding="async"
                 className={`block w-full ${reduceMotion ? "" : "transition-[transform] duration-300 group-hover:scale-[1.03]"}`}
                 style={{
                   backgroundImage: `url(${photo.blurDataURL})`,
