@@ -1,3 +1,7 @@
+"use client";
+
+import { useLocale } from "./LocaleProvider";
+
 const INSTRUCTORS = [
   {
     name: "Don Kitch Jr.",
@@ -26,15 +30,15 @@ const INSTRUCTORS = [
 ];
 
 export default function Instructors() {
+  const { t } = useLocale();
+
   return (
     <section id="instructors" className="border-t border-white/5 px-6 py-16 sm:px-12">
       <div className="mx-auto max-w-3xl">
         <h2 className="mb-2 text-sm font-bold uppercase tracking-widest text-white/40">
-          Thank You
+          {t("instructorsHeading")}
         </h2>
-        <p className="mb-10 text-lg text-white/60">
-          To the instructors who made it all possible.
-        </p>
+        <p className="mb-10 text-lg text-white/60">{t("instructorsLead")}</p>
         <div className="grid gap-8 sm:grid-cols-3">
           {INSTRUCTORS.map((inst) => (
             <a
