@@ -47,6 +47,7 @@ function VideoTile({ src, poster, href }: { src: string; poster: string; href: s
 const VIDEOS = [
   { index: 1, src: "/video/portimao-loop.mp4", poster: "/video/portimao-poster.jpg", href: "https://www.youtube.com/watch?v=Yobha4RtjPA" },
   { index: 2, src: "/video/gt4-loop.mp4", poster: "/video/gt4-poster.jpg", href: "https://www.youtube.com/watch?v=Ry88WxWedhs" },
+  { index: 3, src: "/video/redgt4-loop.mp4", poster: "/video/redgt4-poster.jpg", href: "https://www.youtube.com/watch?v=C1cIG04eZyw" },
 ];
 
 export default function Gallery({ activeAlbum }: { activeAlbum: Album }) {
