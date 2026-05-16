@@ -1,6 +1,6 @@
 # dmitryracing
 
-Track-day site for a Porsche 718 Cayman GT4 — galleries, circuit reference, story timeline, and telemetry demo — built as a **Next.js–compatible app on Vite** and deployed to **Cloudflare Workers**.
+A Next.js–compatible app on Vite for my track days. Deployed to Cloudflare Workers.
 
 ## Tech stack
 
