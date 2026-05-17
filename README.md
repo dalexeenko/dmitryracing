@@ -2,6 +2,8 @@
 
 A Next.js–compatible app on Vite for my track days. Deployed to Cloudflare Workers.
 
+<img width="1124" height="1186" alt="Screenshot 2026-05-17 at 1 35 34 PM" src="https://github.com/user-attachments/assets/b1e601f6-8611-4321-af65-3c52eb198599" />
+
 ## Tech stack
 
 | Layer | Technology |
