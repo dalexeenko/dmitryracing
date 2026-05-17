@@ -1,4 +1,5 @@
 import "./globals.css";
+import { WebMCP } from "../components/WebMCP";
 
 export const metadata = {
   title: "DMITRY RACING | Porsche 718 Cayman GT4 on Track",
@@ -27,6 +28,7 @@ export default function RootLayout({
       </head>
       <body className="bg-[#0a0a0a] text-white antialiased font-[Inter,sans-serif]">
         {children}
+        <WebMCP />
       </body>
     </html>
   );

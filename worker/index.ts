@@ -38,6 +38,28 @@ export default {
       }, allowedWidths);
     }
 
+    // Markdown for Agents: serve /llms.txt as the markdown representation
+    // of the homepage when an agent asks for text/markdown.
+    if (
+      (url.pathname === "/" || url.pathname === "") &&
+      (request.headers.get("accept") ?? "").includes("text/markdown")
+    ) {
+      const md = await env.ASSETS.fetch(
+        new Request(new URL("/llms.txt", request.url))
+      );
+      if (md.ok) {
+        const text = await md.text();
+        const tokens = text.split(/\s+/).filter(Boolean).length;
+        return new Response(text, {
+          headers: {
+            "Content-Type": "text/markdown; charset=utf-8",
+            "x-markdown-tokens": String(tokens),
+            "Cache-Control": "public, max-age=3600",
+          },
+        });
+      }
+    }
+
     // Delegate everything else to vinext
     const res = await handler.fetch(request);
 
