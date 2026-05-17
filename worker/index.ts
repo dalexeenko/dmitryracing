@@ -46,7 +46,11 @@ export default {
       const headers = new Headers(res.headers);
       headers.append(
         "Link",
-        '</sitemap.xml>; rel="sitemap"; type="application/xml"'
+        [
+          '</sitemap.xml>; rel="sitemap"; type="application/xml"',
+          '</llms.txt>; rel="alternate"; type="text/plain"; title="LLM-friendly summary"',
+          '<https://dmitry.ie>; rel="author"; title="Dmitry Alexeenko"',
+        ].join(", ")
       );
       return new Response(res.body, {
         status: res.status,
