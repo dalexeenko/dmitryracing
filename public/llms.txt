@@ -1,0 +1,15 @@
+# Dmitry Alexeenko Racing
+
+> Personal racing portfolio. Track-day driving across Estoril, Portimão, The Ridge, and Pacific Raceways. Photos, instructor credits, and circuit maps from the Iberian and Pacific Northwest race weekends.
+
+## Tracks featured
+
+- Autódromo do Estoril (Portugal)
+- Autódromo Internacional do Algarve / Portimão (Portugal)
+- The Ridge Motorsports Park (Washington, USA)
+- Pacific Raceways (Washington, USA)
+
+## Other
+
+- [Blog](https://dmitry.ie)
+- [About](https://dmitry.ie/about)

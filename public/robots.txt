@@ -1,0 +1,10 @@
+# Content-Signal: declares the operator's preferences for how
+# automated agents may use the content fetched from this site.
+# See https://contentsignals.org/
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
+User-Agent: *
+Allow: /
+
+Host: https://dmitryracing.com
+Sitemap: https://dmitryracing.com/sitemap.xml

@@ -39,6 +39,22 @@ export default {
     }
 
     // Delegate everything else to vinext
-    return handler.fetch(request);
+    const res = await handler.fetch(request);
+
+    // Add agent-discovery Link headers on the homepage (RFC 8288)
+    if (url.pathname === "/" || url.pathname === "") {
+      const headers = new Headers(res.headers);
+      headers.append(
+        "Link",
+        '</sitemap.xml>; rel="sitemap"; type="application/xml"'
+      );
+      return new Response(res.body, {
+        status: res.status,
+        statusText: res.statusText,
+        headers,
+      });
+    }
+
+    return res;
   },
 };
