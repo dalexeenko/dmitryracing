@@ -498,5 +498,45 @@
     "height": 1280,
     "album": "estoril",
     "dominantColor": "rgb(156,123,112)"
+  },
+  {
+    "id": "estoril-banner",
+    "src": "/photos/full/estoril-banner.jpg",
+    "thumb": "/photos/thumb/estoril-banner.jpg",
+    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABQADBP/EACIQAAICAQMEAwAAAAAAAAAAAAECAAMRBCExBQYTkRJhsf/EABYBAQEBAAAAAAAAAAAAAAAAAAIAAf/EABkRAAIDAQAAAAAAAAAAAAAAAAABAhESQf/aAAwDAQACEQMRAD8Acp6irMFB0xYjZReOfU0s6wtN4odaA5GdrsgD7ONoGMIMKAJyppxUzMLLG+XIY5EOhqK6xrU90pp7fH46XIG5W3I/JQQqueB6lLRlH//Z",
+    "width": 1600,
+    "height": 1066,
+    "album": "estoril",
+    "dominantColor": "rgb(168,159,155)"
+  },
+  {
+    "id": "estoril-corner",
+    "src": "/photos/full/estoril-corner.jpg",
+    "thumb": "/photos/thumb/estoril-corner.jpg",
+    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABQADBP/EACMQAAICAgECBwAAAAAAAAAAAAECAAMEESEFBhITIjFBQnH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABcRAQEBAQAAAAAAAAAAAAAAAAEAEUH/2gAMAwEAAhEDEQA/AH7+uiskUUHI50PAef3mHZXdOQ5WvBrq80bDBzvfHwJmlCY2Gly+qywlQT9dTlWmpGLpUisfchQDJ1rA7EXYvVMi57rmd7HOyxBMowSZQjC//9k=",
+    "width": 1600,
+    "height": 1066,
+    "album": "estoril",
+    "dominantColor": "rgb(156,146,140)"
+  },
+  {
+    "id": "estoril-straight",
+    "src": "/photos/full/estoril-straight.jpg",
+    "thumb": "/photos/thumb/estoril-straight.jpg",
+    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAQFAQb/xAAnEAACAgIBAQcFAAAAAAAAAAABAgMEABEFEgYTFCExQlFxcpGhsf/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/EABsRAAIBBQAAAAAAAAAAAAAAAAAhEgERMVFh/9oADAMBAAIRAxEAPwCxa7QzQxlgtNND3TFv4NYsvNcncqd9A0HQCVYwoW0fqTkkxo66dQw+CNjGadiSi265CA+qjyBwYq2GZJyXKs5PjLI+3oA/GsM6KrRgvV0sNGoLjeiu/wB4ZRrszLh//9k=",
+    "width": 1600,
+    "height": 1066,
+    "album": "estoril",
+    "dominantColor": "rgb(155,152,147)"
+  },
+  {
+    "id": "estoril-portrait",
+    "src": "/photos/full/estoril-portrait.jpg",
+    "thumb": "/photos/thumb/estoril-portrait.jpg",
+    "blurDataURL": "data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAANABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAUGAwT/xAAiEAACAgEDBAMAAAAAAAAAAAABAgMRAAQSEwUGITFSkcH/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABoRAAICAwAAAAAAAAAAAAAAAAABAhEhQmH/2gAMAwEAAhEDEQA/AKHT9YSa9sLIB65PH5mGt7h4EBjVWtgCVN194rdeVGRySpFHzWcsfTdJGpAiu6vcxOFsuKjsUD9yabceOOV1+SrYOGIxFGoCooVR6AwwyS+H/9k=",
+    "width": 1600,
+    "height": 1066,
+    "album": "estoril",
+    "dominantColor": "rgb(173,159,159)"
   }
 ]
