@@ -1,7 +1,13 @@
 import { NextResponse } from "next/server";
 import { getD1 } from "@/lib/edge-db";
-import { devMemoryAdd } from "@/lib/dev-memory-store";
+import { canUseDevMemoryStore, devMemoryAdd } from "@/lib/dev-memory-store";
 import { isValidEmail, normalizeEmail } from "@/lib/validate-email";
+
+const storageUnavailable = () =>
+  NextResponse.json(
+    { error: "Persistent email storage is unavailable" },
+    { status: 503 },
+  );
 
 export async function POST(request: Request) {
   let body: unknown;
@@ -30,8 +36,14 @@ export async function POST(request: Request) {
         .run();
       return NextResponse.json({ ok: true });
     } catch {
-      /* fall through */
+      if (!canUseDevMemoryStore()) {
+        return storageUnavailable();
+      }
     }
+  }
+
+  if (!canUseDevMemoryStore()) {
+    return storageUnavailable();
   }
 
   const r = devMemoryAdd("notify", norm);
