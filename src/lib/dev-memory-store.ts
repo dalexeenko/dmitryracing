@@ -20,3 +20,7 @@ export function devMemoryAdd(table: Table, email: string): "ok" | "duplicate" {
   s.add(email);
   return "ok";
 }
+
+export function canUseDevMemoryStore(): boolean {
+  return process.env.NODE_ENV !== "production";
+}
