@@ -28,7 +28,8 @@ A Next.js–compatible app on Vite for my track days. Deployed to Cloudflare Wor
 
 | Command | Purpose |
 |---------|---------|
-| `npm run dev` | Vite dev server (port **3001**) |
+| `npm run dev` | Local Node/Vite dev server at **http://localhost:3001** |
+| `npm run dev:workers` | Explicit Cloudflare Workers emulator on port **3001** |
 | `npm run build` | Production build (`dist/client`, `dist/server`, SSR bundles) |
 | `npm run start` | `vinext start` — local production server (port 3000); may not match all Workers-only behavior |
 | `npm run dev:e2e` | Vite on `127.0.0.1:3001` for Playwright / Lighthouse |
@@ -37,6 +38,13 @@ A Next.js–compatible app on Vite for my track days. Deployed to Cloudflare Wor
 | `npm run lhci` | Lighthouse CI (expects site at `http://127.0.0.1:3001`) |
 | `npm run process-images` | Sharp pipeline from configured source folders → `public/photos/*` + `src/data/photos.json` |
 | `npm run enrich-photos` | Adds `dominantColor` to each entry in `src/data/photos.json` from thumbnails |
+
+For the photo site preview, use `npm run dev`. It runs the UI in Node so
+hot reloads do not inherit request-scoped promises from the Workers emulator.
+Use `npm run dev:workers` when testing Cloudflare bindings or the custom Worker
+entry point. `npm run build` still produces the Cloudflare Workers build.
+Both development modes fail clearly if port 3001 is already occupied; stop the
+previous server with Ctrl+C before switching modes.
 
 ## Deploy (Cloudflare)
 

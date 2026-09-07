@@ -12,7 +12,8 @@
     "test:e2e": "playwright test",
     "lhci": "lhci autorun --config=./lighthouserc.cjs",
     "process-images": "node scripts/process-images.mjs",
-    "enrich-photos": "node scripts/enrich-photos.mjs"
+    "enrich-photos": "node scripts/enrich-photos.mjs",
+    "dev:workers": "vite dev --mode workers --port 3001"
   },
   "keywords": [],
   "author": "",
