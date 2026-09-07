@@ -1,9 +1,7 @@
-import { afterEach, describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 
 import { POST as notifyPost } from "./notify/route";
 import { POST as newsletterPost } from "./newsletter/route";
-
-const originalNodeEnv = process.env.NODE_ENV;
 
 function jsonRequest(path: string, body: unknown): Request {
   return new Request(`https://dmitryracing.com${path}`, {
@@ -15,11 +13,11 @@ function jsonRequest(path: string, body: unknown): Request {
 
 describe("email capture routes", () => {
   afterEach(() => {
-    process.env.NODE_ENV = originalNodeEnv;
+    vi.unstubAllEnvs();
   });
 
   it("fails closed for newsletter submissions in production without D1", async () => {
-    process.env.NODE_ENV = "production";
+    vi.stubEnv("NODE_ENV", "production");
 
     const response = await newsletterPost(
       jsonRequest("/api/newsletter", { email: "driver@example.com" }),
@@ -32,7 +30,7 @@ describe("email capture routes", () => {
   });
 
   it("fails closed for notify submissions in production without D1", async () => {
-    process.env.NODE_ENV = "production";
+    vi.stubEnv("NODE_ENV", "production");
 
     const response = await notifyPost(
       jsonRequest("/api/notify", { email: "driver@example.com" }),
@@ -45,7 +43,7 @@ describe("email capture routes", () => {
   });
 
   it("keeps dev-memory fallback outside production", async () => {
-    process.env.NODE_ENV = "test";
+    vi.stubEnv("NODE_ENV", "test");
 
     const response = await newsletterPost(
       jsonRequest("/api/newsletter", { email: "local@example.com" }),
