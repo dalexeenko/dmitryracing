@@ -1,4 +1,19 @@
-# dmitryracing
+# dmitryracing — v2
+
+## Website versions
+
+- Original: https://dmitryracing.com — GitHub `master`, preserved at tag `v1-original-2026-09-07` (`da69589`).
+- New design: https://v2.dmitryracing.com — GitHub `v2`, separate Cloudflare Worker `dmitryracing-v2`.
+
+This checkout is the **v2 branch**. `npm run dev` previews it at http://localhost:3001.
+`npm run deploy:v2` builds and publishes only the v2 Worker and subdomain.
+The original Worker `dmitryracing` and the main domain are separate and are not changed by this command.
+
+To inspect the preserved original alongside v2:
+
+```sh
+git worktree add --detach ../dmitryracing-original v1-original-2026-09-07
+```
 
 A Next.js–compatible app on Vite for my track days. Deployed to Cloudflare Workers.
 

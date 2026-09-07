@@ -5,8 +5,8 @@ test("home loads and main regions are present", async ({ page }) => {
   await expect(page.locator("#top")).toBeVisible();
   await expect(page.locator("#gallery")).toBeVisible();
   await expect(page.locator("#tracks")).toBeVisible();
-  await expect(page.locator("#guide")).toBeVisible();
-  await expect(page.locator("#story")).toBeVisible();
+  await expect(page.locator("#instructors")).toBeVisible();
+  await expect(page.locator("#lights")).toBeVisible();
 });
 
 test("events API returns JSON", async ({ request }) => {
