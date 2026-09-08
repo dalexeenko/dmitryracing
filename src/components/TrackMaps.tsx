@@ -3,8 +3,8 @@ import type { Album } from "../app/page";
 export const TRACKS = [
     { name: "Portimão", region: "ALGARVE, PORTUGAL", detail: "4.653 km", turns: 16, svg: "/tracks/portimao.svg", album: "algarve" },
     { name: "Estoril", region: "ESTORIL, PORTUGAL", detail: "4.182 km", turns: 13, svg: "/tracks/estoril.svg", album: "estoril" },
-    { name: "Pacific Raceways", region: "KENT, WASHINGTON", detail: "3.621 km", turns: 10, svg: "/tracks/pacific.svg", album: "pacific" },
-    { name: "The Ridge", region: "SHELTON, WASHINGTON", detail: "3.975 km", turns: 16, svg: "/tracks/ridge.svg", album: "ridge" },
+    { name: "Pacific Raceways", region: "SEATTLE, WASHINGTON", detail: "3.621 km", turns: 10, svg: "/tracks/pacific.svg", album: "pacific" },
+    { name: "The Ridge", region: "SEATTLE, WASHINGTON", detail: "3.975 km", turns: 16, svg: "/tracks/ridge.svg", album: "ridge" },
 ] as const;
 export default function TrackMaps({ activeAlbum, onAlbumChange }: {
     activeAlbum: Album;
