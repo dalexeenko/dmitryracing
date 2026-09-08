@@ -2,6 +2,8 @@ import "./globals.css";
 import { WebMCP } from "../components/WebMCP";
 
 export const metadata = {
+  metadataBase: new URL("https://hello.dmitryracing.com"),
+  alternates: { canonical: "/" },
   title: "DMITRY RACING | Porsche 718 Cayman GT4 on Track",
   description:
     "Track photos of a red Porsche 718 Cayman GT4 at Algarve, Estoril, Pacific Raceways, and The Ridge Motorsports Park.",

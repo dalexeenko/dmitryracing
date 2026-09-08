@@ -3,10 +3,17 @@
 ## Website versions
 
 - Original: https://dmitryracing.com — GitHub `master`, preserved at tag `v1-original-2026-09-07` (`da69589`).
-- New design: https://v2.dmitryracing.com — GitHub `v2`, separate Cloudflare Worker `dmitryracing-v2`.
+- New design: https://hello.dmitryracing.com — GitHub `v2`, separate Cloudflare Worker `dmitryracing-v2`.
+
+The previous address, https://v2.dmitryracing.com, permanently redirects to the
+same path at `hello.dmitryracing.com`, preserving query strings. Both custom
+domains remain attached to `dmitryracing-v2` for DNS and TLS. The redirect runs
+as a zone-level Cloudflare Single Redirect before the Worker or static assets.
+Its API configuration is recorded in `cloudflare/redirect-v2-to-hello.json`;
+Wrangler deploys preserve this separate rule.
 
 This checkout is the **v2 branch**. `npm run dev` previews it at http://localhost:3001.
-`npm run deploy:v2` builds and publishes only the v2 Worker and subdomain.
+`npm run deploy:v2` builds and publishes only the v2 Worker and its custom domains.
 The original Worker `dmitryracing` and the main domain are separate and are not changed by this command.
 
 To inspect the preserved original alongside v2:

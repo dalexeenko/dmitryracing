@@ -6,5 +6,5 @@ Content-Signal: search=yes, ai-input=yes, ai-train=yes
 User-Agent: *
 Allow: /
 
-Host: https://dmitryracing.com
-Sitemap: https://dmitryracing.com/sitemap.xml
+Host: https://hello.dmitryracing.com
+Sitemap: https://hello.dmitryracing.com/sitemap.xml

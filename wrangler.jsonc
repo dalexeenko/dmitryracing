@@ -4,6 +4,7 @@
   "account_id": "fa9c07430ed60b97a34a36fa3917a1af",
   "workers_dev": false,
   "routes": [
+    { "pattern": "hello.dmitryracing.com", "custom_domain": true },
     { "pattern": "v2.dmitryracing.com", "custom_domain": true }
   ],
   "compatibility_date": "2026-02-28",
