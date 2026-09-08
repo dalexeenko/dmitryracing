@@ -1,4 +1,5 @@
 "use client";
+import ArrowUpRight from "./ArrowUpRight";
 import { useState, useRef, useEffect, useLayoutEffect } from "react";
 type Phase = 'idle' | 'countdown' | 'go' | 'result' | 'early';
 export default function ReactionGame() {
@@ -48,5 +49,5 @@ export default function ReactionGame() {
         e.preventDefault();
         act();
     } }} onClick={e => { if (e.detail === 0)
-        act(); }}>{label}<span aria-hidden="true">↗</span></button><p className="session-best">{best === null ? 'Your best time this visit will appear here.' : `Best this visit: ${(best / 1000).toFixed(3)} s`}</p></div></section>;
+        act(); }}>{label}<span aria-hidden="true"><ArrowUpRight /></span></button><p className="session-best">{best === null ? 'Your best time this visit will appear here.' : `Best this visit: ${(best / 1000).toFixed(3)} s`}</p></div></section>;
 }

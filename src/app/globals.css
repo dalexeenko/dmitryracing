@@ -111,3 +111,6 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var
   .reaction-copy > p:not(.eyebrow) { margin-top: 16px; }
   .reaction-game { padding: 24px 16px; }
 }
+
+/* Draw arrows directly so mobile platforms cannot substitute emoji glyphs. */
+.arrow-up-right { display: inline-block; width: 1em; height: 1em; flex: none; vertical-align: -.125em; }
