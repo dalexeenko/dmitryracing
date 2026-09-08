@@ -46,3 +46,68 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var
 .lightbox-stage { position: absolute; inset: 0; background: #0b0c0b; }
 .lightbox-stage:fullscreen { width: 100vw; height: 100dvh; }
 .lightbox-actions [role="status"] { font-size: .75rem; max-width: 150px; }
+
+/* On phones, give the photography the screen width and keep browsing controls compact. */
+@media (max-width: 640px) {
+  html { scroll-padding-top: 64px; }
+  .racing-nav nav { padding: 4px 16px; gap: 12px; flex-wrap: nowrap; min-height: 52px; }
+  .nav-links { gap: 16px; font-size: .75rem; }
+  .nav-links a { display: inline-flex; align-items: center; min-height: 44px; }
+  .nav-links a[href="#instructors"] { display: none; }
+  .nav-play span { display: none; }
+  .racing-hero { padding: 20px 0 0; }
+  .hero-heading { padding: 0 16px; }
+  .hero-heading .eyebrow { max-width: none; font-size: .625rem; margin-bottom: 10px; }
+  .hero-heading h1 { font-size: 11.4vw; margin-bottom: 16px; }
+  .hero-image { background: var(--racing-bg); }
+  .hero-image img { height: auto; aspect-ratio: 2200 / 1467; object-fit: contain; }
+  .hero-caption { position: static; background: none; padding: 12px 16px 0; gap: 0; }
+  .hero-caption .eyebrow { font-size: .625rem; color: var(--racing-muted); }
+  .hero-caption p { font-size: 1.5rem; margin-top: 2px; }
+  .hero-explore { display: none; }
+  .hero-bottom { padding: 12px 16px 20px; font-size: .6875rem; }
+  .section-wrap { padding: 28px 16px; }
+  .section-heading { margin-bottom: 18px; gap: 12px; }
+  .section-heading h2 { font-size: 1.875rem; max-width: none; }
+  .section-heading .eyebrow { font-size: .625rem; margin-bottom: 6px; }
+  .circuits .section-heading { align-items: end; flex-wrap: nowrap; }
+  .circuits .section-heading h2 { font-size: 1.5rem; }
+  .text-button { min-height: 44px; gap: 10px; font-size: .75rem; }
+  .circuit-grid {
+    display: grid; grid-template-columns: none; grid-auto-flow: column;
+    grid-auto-columns: 164px; gap: 8px; overflow-x: auto;
+    margin: 0 -16px; padding: 2px 16px 8px;
+    border: 0; background: none; scroll-snap-type: x proximity;
+    scroll-padding-inline: 16px; overscroll-behavior-x: contain;
+  }
+  .circuit { padding: 12px; border: 1px solid var(--racing-line); scroll-snap-align: start; }
+  .circuit-top { position: absolute; top: 8px; left: 12px; right: 12px; }
+  .circuit-top .eyebrow { font-size: .5625rem; }
+  .circuit-arrow { font-size: 1rem; }
+  .circuit img { height: 45px; margin: 14px 0 12px; }
+  .circuit-name { font-size: 1rem; }
+  .circuit-details { font-size: .6875rem; margin-top: 5px; }
+  .circuit-region { font-size: .5625rem; margin-top: 7px; letter-spacing: 0; }
+  .gallery-section { padding: 16px 0 28px; }
+  .gallery-section > .section-heading { padding: 0 16px; gap: 8px; }
+  .gallery-section > .section-heading > div { width: 100%; }
+  .gallery-count { font-size: .75rem; max-width: none; }
+  .editorial-grid { display: flex; flex-direction: column; gap: 6px; }
+  .photo-tile { width: 100%; }
+  .editorial-grid .photo-tile img { width: 100%; height: auto; aspect-ratio: auto; object-fit: contain; }
+  .photo-tile:hover img { transform: none; }
+  .photo-caption { padding: 32px 16px 12px; font-size: .8125rem; }
+  .photo-caption > span:last-child { display: inline; font-size: 1.25rem; }
+  .gallery-more { margin: 20px 16px 0; gap: 10px; }
+  .outline-button { justify-content: space-between; width: 100%; min-height: 48px; padding: 12px 16px; }
+  .selected-circuit { margin: 0 16px 16px; padding: 12px 0; }
+  .films { margin-top: 32px; }
+  .films .section-heading, .film > span { padding: 0 16px; }
+  .film-grid { gap: 20px; }
+  .film > span { margin-top: 8px; }
+  .reaction-section { gap: 20px; }
+  .reaction-copy h2 { font-size: 2.75rem; }
+  .reaction-copy > .eyebrow { margin-bottom: 12px; }
+  .reaction-copy > p:not(.eyebrow) { margin-top: 16px; }
+  .reaction-game { padding: 24px 16px; }
+}
