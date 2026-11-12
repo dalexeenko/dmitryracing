@@ -11,8 +11,8 @@ Standard commands live in `README.md` and `package.json` `scripts`; only non-obv
 - Dev server: `npm run dev` (Vite, port **3001**, Node runtime). Both `localhost` and
   `127.0.0.1` work. It binds to `127.0.0.1` with strict port selection.
 - Use `npm run dev:workers` only when explicitly testing Cloudflare bindings.
-- This is the v2 branch. Deploy only with `npm run deploy:v2`; the original main-domain
-  Worker is preserved separately. See README for the original source tag.
+- On `master`, `npm run deploy` builds and deploys the `dmitryracing` main-domain Worker.
+  The `v2` branch deploys the separate hello Worker.
 - First request to a route triggers on-demand SSR compilation, so the very first `curl` may
   return empty/no-response; retry once after the page compiles.
 
